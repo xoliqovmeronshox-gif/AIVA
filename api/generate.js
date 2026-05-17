@@ -1,21 +1,24 @@
 const styleModelChains = {
   pro: [
-    "recraft/recraft-v4.1",
-    "recraft/recraft-v4",
-    "recraft/recraft-v3",
-    "recraft/recraft-v4-pro"
+    "black-forest-labs/flux.2-pro",
+    "black-forest-labs/flux.2-flex",
+    "sourceful/riverflow-v2-standard-preview",
+    "google/gemini-2.5-flash-image",
+    "google/gemini-3.1-flash-image-preview"
   ],
   flex: [
-    "recraft/recraft-v4",
-    "recraft/recraft-v4.1",
-    "recraft/recraft-v3",
-    "recraft/recraft-v4-pro"
+    "black-forest-labs/flux.2-flex",
+    "black-forest-labs/flux.2-pro",
+    "sourceful/riverflow-v2-standard-preview",
+    "google/gemini-2.5-flash-image",
+    "google/gemini-3.1-flash-image-preview"
   ],
   vector: [
-    "recraft/recraft-v3",
-    "recraft/recraft-v4.1",
-    "recraft/recraft-v4",
-    "recraft/recraft-v4-pro"
+    "sourceful/riverflow-v2-standard-preview",
+    "black-forest-labs/flux.2-pro",
+    "black-forest-labs/flux.2-flex",
+    "google/gemini-2.5-flash-image",
+    "google/gemini-3.1-flash-image-preview"
   ]
 };
 
@@ -123,7 +126,7 @@ async function generateImage(prompt, style, aspectRatio) {
     }
   }
 
-  throw new Error("Ни один стиль сейчас не ответил. Попробуйте ещё раз через минуту.");
+  throw new Error("Генерация сейчас не прошла. Проверьте баланс ключа и попробуйте ещё раз.");
 }
 
 module.exports = async function handler(request, response) {
