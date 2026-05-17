@@ -1,0 +1,9 @@
+{
+  "name": "aiva-image-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node local-server.js",
+    "check": "node --check api/generate.js && node --check generate.js && node --check dashboard.js && node --check home.js && node --check local-server.js"
+  }
+}

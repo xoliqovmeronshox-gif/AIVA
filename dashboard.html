@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Панель | AIVA Image Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell dashboardShell">
+      <nav class="topbar innerTopbar" aria-label="Навигация">
+        <a class="brandMark" href="/" aria-label="AIVA Image Studio">
+          <span>A</span><strong>AIVA</strong>
+        </a>
+        <div class="navLinks">
+          <a href="/">Главная</a>
+          <a href="/generate">Генерация</a>
+        </div>
+      </nav>
+
+      <section class="pageHeader compactHeader">
+        <p class="eyebrow">панель управления</p>
+        <h1>Студия</h1>
+        <p>История изображений, лимит, стиль интерфейса и быстрые настройки.</p>
+      </section>
+
+      <section class="statGrid" aria-label="Статистика">
+        <article class="statCard"><strong id="usedCount">0</strong><span>создано сегодня</span></article>
+        <article class="statCard"><strong id="leftCount">3</strong><span>осталось</span></article>
+        <article class="statCard"><strong id="historyCount">0</strong><span>в истории</span></article>
+      </section>
+
+      <section class="dashboardGrid">
+        <div class="widePanel">
+          <div class="sectionTitle">
+            <h2>История</h2>
+            <a class="secondaryAction smallAction" href="/generate">Создать новое</a>
+          </div>
+          <div class="historyGrid" id="historyGrid">
+            <div class="emptyHistory">
+              <strong>Пока пусто</strong>
+              <span>Созданные изображения появятся здесь.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidePanel settingsPanel">
+          <h2>Настройки</h2>
+          <label class="toggleRow">
+            <span>
+              <strong>Dark mode</strong>
+              <small>Тёмная тема для всей студии</small>
+            </span>
+            <input id="themeToggle" type="checkbox" />
+          </label>
+
+          <div class="settingBlock">
+            <strong>Формат по умолчанию</strong>
+            <div class="pillRow">
+              <span>1:1</span>
+              <span>16:9</span>
+              <span>9:16</span>
+            </div>
+          </div>
+
+          <div class="settingBlock">
+            <strong>Быстрые стили</strong>
+            <div class="pillRow">
+              <span>Pro</span>
+              <span>Flex</span>
+              <span>Vector</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./aiva-store.js?v=1"></script>
+    <script src="./dashboard.js?v=5"></script>
+  </body>
+</html>

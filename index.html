@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AIVA Image Studio</title>
+    <meta
+      name="description"
+      content="AI image generation studio with private serverless generation"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <nav class="topbar" aria-label="Главная навигация">
+          <a class="brandMark" href="/" aria-label="AIVA Image Studio">
+            <span>A</span><strong>AIVA</strong>
+          </a>
+          <div class="navLinks">
+            <a href="/dashboard">Панель</a>
+            <a href="/generate">Генерация</a>
+          </div>
+        </nav>
+
+        <div class="heroGrid">
+          <div class="heroCopy">
+            <p class="eyebrow">private ai studio</p>
+            <h1>AIVA Image Studio</h1>
+            <p>
+              Красивый генератор изображений с приватной обработкой, тремя
+              стилями, лимитом на 24 часа и экспортом готовых работ.
+            </p>
+            <div class="heroActions">
+              <a class="primaryAction" href="/generate">Создать изображение</a>
+              <a class="secondaryAction" href="/dashboard">Открыть панель</a>
+            </div>
+          </div>
+
+          <div class="showcase" aria-label="Последние изображения">
+            <div class="poster posterOne homePoster" data-slot="0">
+              <img class="hidden posterImage" alt="Последнее изображение" />
+              <span>portrait</span>
+            </div>
+            <div class="poster posterTwo userPoster homePoster" data-slot="1">
+              <img class="hidden posterImage" alt="Последнее изображение" />
+              <span>ваш результат</span>
+            </div>
+            <div class="poster posterThree homePoster" data-slot="2">
+              <img class="hidden posterImage" alt="Последнее изображение" />
+              <span>logo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./aiva-store.js?v=1"></script>
+    <script src="./home.js?v=5"></script>
+  </body>
+</html>

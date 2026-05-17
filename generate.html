@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Генерация | AIVA Image Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="topbar innerTopbar" aria-label="Навигация">
+        <a class="brandMark" href="/" aria-label="AIVA Image Studio">
+          <span>A</span><strong>AIVA</strong>
+        </a>
+        <div class="navLinks">
+          <a href="/">Главная</a>
+          <a href="/dashboard">Панель</a>
+        </div>
+      </nav>
+
+      <section class="generatorLayout">
+        <div class="toolPanel">
+          <div class="panelHeader">
+            <p class="eyebrow">ai generator</p>
+            <h1>Создать изображение</h1>
+            <span id="limitBadge">3 из 3 осталось</span>
+          </div>
+
+          <label class="field">
+            <span>Промпт</span>
+            <textarea
+              id="prompt"
+              placeholder="Например: премиальный логотип для кофейного бренда, минимализм, тёплый свет, чистая композиция"
+              rows="7"
+            ></textarea>
+          </label>
+
+          <div class="modelGrid" role="radiogroup" aria-label="Стиль">
+            <button class="modelButton active" data-style="pro" type="button">
+              <span>Премиум</span><strong>Studio Pro</strong><small>реализм и постеры</small>
+            </button>
+            <button class="modelButton" data-style="flex" type="button">
+              <span>Гибко</span><strong>Studio Flex</strong><small>разные идеи и сцены</small>
+            </button>
+            <button class="modelButton" data-style="vector" type="button">
+              <span>Графика</span><strong>Studio Vector</strong><small>логотипы и чистый стиль</small>
+            </button>
+          </div>
+
+          <div class="ratioRow" aria-label="Формат">
+            <button class="ratioButton active" data-ratio="1:1" type="button">1:1</button>
+            <button class="ratioButton" data-ratio="16:9" type="button">16:9</button>
+            <button class="ratioButton" data-ratio="9:16" type="button">9:16</button>
+            <button class="ratioButton" data-ratio="4:3" type="button">4:3</button>
+            <button class="ratioButton" data-ratio="3:4" type="button">3:4</button>
+          </div>
+
+          <p class="errorText hidden" id="errorText"></p>
+          <p class="successText hidden" id="successText"></p>
+
+          <div class="actionRow">
+            <button class="primaryAction buttonReset" id="generateButton" type="button">
+              Сгенерировать
+            </button>
+          </div>
+        </div>
+
+        <aside class="previewPanel">
+          <div class="previewFrame">
+            <img class="hidden" id="resultImage" alt="Сгенерированное изображение" />
+            <div class="emptyPreview" id="emptyPreview">
+              <strong>Studio Pro</strong>
+              <span>1:1</span>
+            </div>
+          </div>
+
+          <div class="exportRow">
+            <a class="primaryAction fullWidth disabled" id="exportLink" download="aiva-image.png" href="#">
+              Экспорт PNG
+            </a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./aiva-store.js?v=1"></script>
+    <script src="./generate.js?v=5"></script>
+  </body>
+</html>
